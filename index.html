@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Voyager - 3D Flying Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-container">
+            <div id="score-container">
+                <div id="distance">Distance: <span id="distance-value">0</span>m</div>
+                <div id="stars">Stars: <span id="stars-value">0</span></div>
+            </div>
+            <div id="game-status"></div>
+        </div>
+        <div id="mobile-controls">
+            <div id="touch-area"></div>
+        </div>
+        <div id="start-screen">
+            <h1>Sky Voyager</h1>
+            <p>Fly through the sky, collect stars, and avoid obstacles!</p>
+            <div class="controls-info">
+                <h2>Controls:</h2>
+                <p>Desktop: Arrow keys or WASD to steer, Space for boost</p>
+                <p>Mobile: Tilt your device to steer, Tap for boost</p>
+            </div>
+            <button id="start-button">Start Game</button>
+        </div>
+        <div id="game-over-screen" class="hidden">
+            <h1>Game Over</h1>
+            <div id="final-score">
+                <p>Distance: <span id="final-distance">0</span>m</p>
+                <p>Stars: <span id="final-stars">0</span></p>
+            </div>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/models.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 
